@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { FeedbackOptions } from './FeedbackOptions/FeedbackOptions';
 import { Section } from './Section/Section';
 
 export class App extends Component {
@@ -8,12 +9,21 @@ export class App extends Component {
     bad: 0,
   };
 
-  static propTypes = {};
+  onLeaveFeedback = evt => {
+    this.setState(prev => ({ [evt.target.name]: prev[evt.target.name] + 1 }));
+  };
 
   render() {
+    const stats = Object.keys(this.state);
+    console.log(this.state);
     return (
       <div>
-        <Section title="Please leave feedback"></Section>
+        <Section title="Please leave feedback">
+          <FeedbackOptions
+            options={stats}
+            onLeaveFeedback={this.onLeaveFeedback}
+          />
+        </Section>
       </div>
     );
   }
