@@ -1,5 +1,10 @@
 .section {
+  padding: 15px;
 }
 
 .title {
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: 0.05em;
+  margin: 0;
+  margin-bottom: 30px;
 }

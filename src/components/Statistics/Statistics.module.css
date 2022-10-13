@@ -1,0 +1,17 @@
+.statisticsList {
+  list-style: none;
+  padding-left: 10px;
+}
+
+.statisticsItem {
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: 0.1em;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.statisticsPositive {
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: 0.1em;
+  font-weight: bold;
+}
