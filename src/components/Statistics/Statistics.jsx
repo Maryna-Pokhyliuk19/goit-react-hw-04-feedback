@@ -1,14 +1,13 @@
 import css from './Statistics.module.css';
 import PropTypes from 'prop-types';
 
-export const Statistics = props => {
-  const { positivePercentage } = props;
+export const Statistics = ({ positivePercentage, ...options }) => {
   return (
     <ul className={css.statisticsList}>
-      {['Good', 'Neutral', 'Bad', 'Total'].map(option => (
+      {Object.keys(options).map(option => (
         <li className={css.statisticsItem} key={option}>
           <p>
-            {option}: {props[option]}
+            {option}: {options[option]}
           </p>
         </li>
       ))}

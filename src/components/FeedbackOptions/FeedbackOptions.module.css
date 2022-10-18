@@ -23,3 +23,7 @@
 .button:hover {
   background-color: rgb(64, 64, 247);
 }
+
+.button::first-letter {
+  text-transform: capitalize;
+}
