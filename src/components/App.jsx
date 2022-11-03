@@ -33,7 +33,8 @@ export const App = () => {
     return Math.floor((good / countTotalFeedback()) * 100);
   };
 
-  const stats = ['good', 'neutral', 'bad'];
+  // const stats = ['good', 'neutral', 'bad'];
+  const stats = Object.keys({ good, neutral, bad });
 
   return (
     <div>
